@@ -6,6 +6,7 @@ export const criptoFetch = async () => {
   try {
     const response = await fetch(url);
     const criptodata = await response.json();
+
     imprimir(criptodata.data);
 
     console.log(criptodata);
@@ -15,7 +16,8 @@ export const criptoFetch = async () => {
 };
 
 function imprimir(arreglo) {
-  mostrar.innerHTML = arreglo
+  const sortData = arreglo.slice(0, 21);
+  mostrar.innerHTML = sortData
     .map((cripto) => {
       let precioCripto = Number(cripto.priceUsd);
       let precioFormateado = precioCripto.toLocaleString("es-US", {

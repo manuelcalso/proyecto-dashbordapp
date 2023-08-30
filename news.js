@@ -1,4 +1,5 @@
 //https://api.markets.sh/api/v1/clusters?api_token=373cb3eecc9ed9a4a2ae9c63e3b41400
+
 export const getData = async () => {
   //generar datos
   const response = await fetch(`http://localhost:3000/News`);

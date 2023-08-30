@@ -48,7 +48,13 @@ body {
   width: 1000px;
   display: flex;
   justify-content: center;
-  background-color: var(--main-background-color);
+
+  background: rgb(34, 193, 195);
+  background: linear-gradient(
+    0deg,
+    rgba(34, 192, 195, 0.315) 0%,
+    rgb(253, 187, 45) 100%
+  );
   border-radius: 10px;
 }
 
@@ -78,7 +84,7 @@ body {
 .hnavegador svg {
   width: 300px;
   height: auto;
-  border: 2px dotted rgba(255, 0, 0, 0.753);
+  border: 2px solid rgba(255, 0, 0, 0.753);
   border-radius: 25px 0px 25px 0px;
 }
 
@@ -120,7 +126,13 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-family: "Newsreader light";
-  background-color: var(--main-background-color-2);
+  background: rgb(34, 192, 195);
+  background: linear-gradient(
+    177deg,
+    rgba(15, 119, 121, 0.897) 0%,
+    rgba(1, 22, 39, 0.842) 100%
+  );
+
   color: #fff;
   border-radius: 10px;
   gap: 5px;
@@ -141,7 +153,7 @@ body {
   border-radius: 5px;
 }
 
-.brandnews img {
+.newsbanner img {
   width: 400px;
   height: auto;
 }
@@ -149,13 +161,20 @@ body {
 #app {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
+
   gap: 5px;
 }
 
 .content {
   border-radius: 50px;
   font-family: "Rubik Bold";
-  background-color: var(--main-background-color-4);
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    16deg,
+    rgba(63, 94, 251, 0.6138830532212884) 0%,
+    rgba(1, 22, 39, 1) 100%
+  );
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -165,15 +184,31 @@ body {
 }
 
 .chartp {
-  font-family: "Rubik Bold";
+  font-family: "Newsreader";
   font-size: x-large;
-  background-color: var(--main-background-color-2);
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    16deg,
+    rgba(63, 94, 251, 0.6138830532212884) 0%,
+    rgba(1, 22, 39, 1) 100%
+  );
   color: #fff;
   border-radius: 5px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #inflachart {
-  background-color: var(--main-background-color-2);
+  background: rgb(63, 94, 251);
+  background: linear-gradient(
+    16deg,
+    rgb(26, 40, 107) 0%,
+    rgba(1, 22, 39, 1) 100%
+  );
+
   border-radius: 5px;
   width: 1000px;
 }
