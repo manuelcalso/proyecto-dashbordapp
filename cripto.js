@@ -29,7 +29,6 @@ function imprimir(arreglo) {
       return /*HTML*/ `
     <a> <div class="content"> 
     <h1 class="criptoname">${cripto.id}</h1>
-    <h3 class="criptosymbol">${cripto.symbol}</h3>
     <h2>today price: ${precioFormateado}</h2>
     </div></a>
     `;
