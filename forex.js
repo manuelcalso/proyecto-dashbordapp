@@ -1,5 +1,3 @@
-import { Chart } from "chart.js";
-
 //www.alphavantage.co/query?function=CURRENCY_EXCHANGE_RATE&from_currency=USD&to_currency=MXN&apikey=339OSPZEM86MC2JK
 
 export const forexData = async () => {
@@ -30,11 +28,7 @@ export const forexData = async () => {
     <section id="forexcontainer">
       <div id="forexMXN">
         <p>${fromCurrencyName}</p>
-        <br/>
-        <br/>   
         <p>${ToCurrencyName}</p>
-        <br/>
-        <br/>
         <p>${exchangeFormat}</p>
       </div>
     </section>

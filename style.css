@@ -81,16 +81,8 @@ body {
   align-items: center;
 }
 
-.hnavegador svg {
-  width: 300px;
-  height: auto;
-  border: 2px solid rgba(255, 0, 0, 0.753);
-  border-radius: 25px 0px 25px 0px;
-}
-
 .hnavegadorp {
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   font-family: "Cinzel Black";
@@ -104,6 +96,8 @@ body {
   align-items: center;
   font-family: "Newsreader";
   font-size: x-large;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+  color: rgb(229, 255, 0);
 }
 
 .hnavegadoropciones a {
@@ -126,16 +120,18 @@ body {
   display: grid;
   grid-template-columns: 1fr 1fr;
   font-family: "Newsreader light";
-  background: rgb(34, 192, 195);
-  background: linear-gradient(
-    177deg,
-    rgba(15, 119, 121, 0.897) 0%,
-    rgba(1, 22, 39, 0.842) 100%
-  );
 
   color: #fff;
   border-radius: 10px;
   gap: 5px;
+  background-color: #004e86;
+  opacity: 1;
+  background-image: repeating-radial-gradient(
+      circle at 0 0,
+      transparent 0,
+      #004e86 13px
+    ),
+    repeating-linear-gradient(#007c5355, #007c53);
 }
 
 .brandnews p {
@@ -149,8 +145,10 @@ body {
 .newsbanner {
   display: grid;
   grid-template-columns: 1fr;
-  border: 2px solid rgba(128, 41, 0, 0.664);
+  border: 2px solid rgba(83, 128, 0, 0.664);
   border-radius: 5px;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);
+  letter-spacing: 0.1rem;
 }
 
 .newsbanner img {
@@ -181,6 +179,8 @@ body {
   align-items: center;
   gap: 5px;
   color: #fff;
+
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
 
 .chartp {
@@ -233,4 +233,5 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
