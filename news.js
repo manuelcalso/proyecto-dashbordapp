@@ -1,17 +1,19 @@
+//datos tomados de esta api
 //https://api.markets.sh/api/v1/clusters?api_token=373cb3eecc9ed9a4a2ae9c63e3b41400
 
 export const getData = async () => {
-  //generar datos
-  const response = await fetch(`http://localhost:3000/News`);
-  console.log(response);
+  try {
+    //generar datos
+    const response = await fetch(`http://localhost:3000/News`);
+    console.log(response);
 
-  const data = await response.json();
-  console.log(data);
+    const data = await response.json();
+    console.log(data);
 
-  //vista inicial
-  document.querySelector("#newsapp").innerHTML =
-    /*HTML*/
-    `<div>
+    //vista inicial
+    document.querySelector("#newsapp").innerHTML =
+      /*HTML*/
+      `<div>
       <div class="brandnews">
         
         ${data
@@ -36,4 +38,7 @@ export const getData = async () => {
       </div>
     </div>
     `;
+  } catch (error) {
+    console.log(error);
+  }
 };
