@@ -18,7 +18,7 @@ criptonews.addEventListener("click", () => {
   criptoFetch();
 });
 
-const criptochart = document.querySelector("#criptochart");
+const criptochart = document.querySelector("#inflchart");
 criptochart.addEventListener("click", () => {
   inflationData();
 });
