@@ -81,11 +81,15 @@ body {
   align-items: center;
 }
 
-.hnavegadorp {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  font-family: "Cinzel Black";
+.hnavegador img {
+  width: 350px;
+  height: 200px;
+}
+
+.hnavegador img:hover {
+  background-color: goldenrod;
+  border-radius: 50% 50%;
+  transition-duration: 750ms;
 }
 
 .hnavegadoropciones {
@@ -98,6 +102,11 @@ body {
   font-size: x-large;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
   color: rgb(229, 255, 0);
+}
+
+.hnavegadoropciones:hover {
+  text-shadow: 3px 3px 4px rgb(255, 0, 0);
+  transition-duration: 750ms;
 }
 
 .hnavegadoropciones a {
@@ -154,6 +163,13 @@ body {
 .newsbanner img {
   width: 400px;
   height: auto;
+  box-shadow: 4px 2px 2px black;
+}
+
+.newsbanner:hover {
+  color: gold;
+  text-shadow: 5px 4px 4px rgba(0, 0, 0, 0.9);
+  transition-duration: 750ms;
 }
 
 #app {
@@ -183,6 +199,11 @@ body {
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
 }
 
+.content:hover {
+  color: gold;
+  transition-duration: 550ms;
+}
+
 .chartp {
   font-family: "Newsreader";
   font-size: x-large;
@@ -202,12 +223,18 @@ body {
 }
 
 #inflachart {
-  background: rgb(63, 94, 251);
-  background: linear-gradient(
-    16deg,
-    rgb(26, 40, 107) 0%,
-    rgba(1, 22, 39, 1) 100%
-  );
+  background-color: #00316d;
+  opacity: 1;
+  background-image: radial-gradient(circle at center center, #011627, #00316d),
+    repeating-radial-gradient(
+      circle at center center,
+      #011627,
+      #011627,
+      40px,
+      transparent 80px,
+      transparent 40px
+    );
+  background-blend-mode: multiply;
 
   border-radius: 5px;
   width: 1000px;
@@ -234,4 +261,8 @@ body {
   justify-content: center;
   align-items: center;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.8);
+}
+
+#forexMXN:hover {
+  color: greenyellow;
 }
