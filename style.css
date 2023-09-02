@@ -89,13 +89,28 @@ body {
 .hnavegador img:hover {
   background-color: #037a7c;
   opacity: 1;
-  background: linear-gradient(135deg, #daa52055 25%, transparent 25%) -30px 0/
+  background: linear-gradient(135deg, #d75c1755 25%, transparent 25%) -30px 0/
       60px 60px,
-    linear-gradient(225deg, #daa520 25%, transparent 25%) -30px 0/ 60px 60px,
-    linear-gradient(315deg, #daa52055 25%, transparent 25%) 0px 0/ 60px 60px,
-    linear-gradient(45deg, #daa520 25%, #037a7c 25%) 0px 0/ 60px 60px;
+    linear-gradient(225deg, #d75c17 25%, transparent 25%) -30px 0/ 60px 60px,
+    linear-gradient(315deg, #d75c1755 25%, transparent 25%) 0px 0/ 60px 60px,
+    linear-gradient(45deg, #d75c17 25%, #037a7c 25%) 0px 0/ 60px 60px;
   border-radius: 50% 50%;
   transition-duration: 750ms;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .hnavegador img {
+    animation: logo-spin infinite 40s linear;
+  }
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(40deg);
+  }
 }
 
 .hnavegadoropciones {

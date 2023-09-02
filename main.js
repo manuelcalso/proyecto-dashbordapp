@@ -4,9 +4,9 @@ import { criptoFetch } from "./cripto";
 import { inflationData } from "./inflation";
 import { forexData } from "./forex";
 
-///eventos
-
 forexData();
+
+///eventos
 
 const newsa = document.querySelector("#newsa");
 newsa.addEventListener("click", () => {
