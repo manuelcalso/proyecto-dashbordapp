@@ -146,14 +146,7 @@ body {
   color: inherit;
 }
 
-.brandnews {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  font-family: "Newsreader light";
-
-  color: #fff;
-  border-radius: 10px;
-  gap: 5px;
+#newscontainer {
   background-color: #004e86;
   opacity: 1;
   background-image: repeating-radial-gradient(
@@ -162,6 +155,15 @@ body {
       #004e86 13px
     ),
     repeating-linear-gradient(#007c5355, #007c53);
+  border-radius: 10px;
+}
+#newsapp {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.brandnews {
+  font-family: "Newsreader light";
+  color: #fff;
 }
 
 .brandnews p {
@@ -173,8 +175,6 @@ body {
 }
 
 .newsbanner {
-  display: grid;
-  grid-template-columns: 1fr;
   border: 2px solid rgba(83, 128, 0, 0.664);
   border-radius: 5px;
   text-shadow: 3px 3px 4px rgba(0, 0, 0, 0.9);

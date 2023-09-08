@@ -3,41 +3,33 @@
 
 export const getData = async () => {
   try {
-    //generar datos
-    const response = await fetch(`http://localhost:3000/News`);
-    console.log(response);
-
+    // Obtener los datos
+    const response = await fetch("./db.json");
     const data = await response.json();
-    console.log(data);
 
-    //vista inicial
-    document.querySelector("#newsapp").innerHTML =
-      /*HTML*/
-      `<div>
-      <div class="brandnews">
-        
-        ${data
-          .map((e) => {
-            return `
-        <div class="newsbanner">
-          <h3>${e.topic_class}</h3>
-          <br> 
-          <h6>${e.last_appearance}</h6>
-          <br>
-          <h1>${e.description}</h1>
-          <br>
-          <p>${e.summary}</p> 
-          <br>
-          <img src="${e.image_url}" alt="Imagen de noticia">
+    const newsApp = document.querySelector("#newsapp");
+
+    const html = data.News.map(
+      (newsItem) => `
+      <section id="newscontainer">
+        <div class="brandnews">
+          <div class="newsbanner">
+            <h3>${newsItem.topic_class}</h3>
+            <br> 
+            <h6>${newsItem.last_appearance}</h6>
+            <br>
+            <h1>${newsItem.description}</h1>
+            <br>
+            <p>${newsItem.summary}</p> 
+            <br>
+            <img src="${newsItem.image_url}" alt="Imagen de noticia">
+         </div>
         </div>
-        
-        `;
-          })
-          .join("")}
-        
-      </div>
-    </div>
-    `;
+      </section>
+    `
+    ).join("");
+
+    newsApp.innerHTML = html;
   } catch (error) {
     console.log(error);
   }
