@@ -6,23 +6,24 @@ export const getData = async () => {
     // Obtener los datos
     const response = await fetch("./db.json");
     const data = await response.json();
+    console.log("data", data);
 
     const newsApp = document.querySelector("#newsapp");
 
     const html = data.News.map(
-      (newsItem) => `
+      (e) => `
       <section id="newscontainer">
         <div class="brandnews">
           <div class="newsbanner">
-            <h3>${newsItem.topic_class}</h3>
+            <h3>${e.topic_class}</h3>
             <br> 
-            <h6>${newsItem.last_appearance}</h6>
+            <h6>${e.last_appearance}</h6>
             <br>
-            <h1>${newsItem.description}</h1>
+            <h1>${e.description}</h1>
             <br>
-            <p>${newsItem.summary}</p> 
+            <p>${e.summary}</p> 
             <br>
-            <img src="${newsItem.image_url}" alt="Imagen de noticia">
+            <img src="${e.image_url}" alt="Imagen de noticia">
          </div>
         </div>
       </section>
